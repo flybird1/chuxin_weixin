@@ -5,10 +5,10 @@ var projectRoot = path.resolve(__dirname, '../')
 
 module.exports = {
   entry: {
-    libs: [
-      './web_modules/strophe.js',
-      './web_modules/websdk-1.1.2.js'
-    ],
+    // libs: [
+    //   './web_modules/strophe.js',
+    //   './web_modules/websdk-1.1.2.js'
+    // ],
     app: './src/main.js'
   },
   output: {
@@ -29,10 +29,6 @@ module.exports = {
     fallback: [path.join(__dirname, '../node_modules')]
   },
   module: {
-    // noParse: [
-    //   /strophe.js/,
-    //   /websdk-1.1.2.js/
-    // ],
     loaders: [
       {
         test: /\.vue$/,

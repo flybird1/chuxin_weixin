@@ -2,7 +2,7 @@
   "name": "desire",
   "version": "0.0.1",
   "description": "desire",
-  "author": "zhangjiage <zhangjiage@zhai.me>",
+  "author": "liqiaomei <liqiaomei@zhai.me>",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",

@@ -6,7 +6,6 @@ import { UPDATE_LOADING, UPDATE_DIRECTION } from './vuex/types'
 
 import Home from './views//Home'
 import Hello from './views/Hello'
-import Webim from './views/Webim'
 
 export default (router) => {
 
@@ -50,9 +49,6 @@ export default (router) => {
     },
     '/hello': {
       component: Hello
-    },
-    'webim': {
-      component: Webim
     }
   })
 

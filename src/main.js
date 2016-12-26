@@ -9,7 +9,7 @@ import configRouter from './routers'
 import Device from './plugins/device'
 
 // services
-import './services/webim'
+// import './services/webim'
 import './services/wechat'
 
 // $device

@@ -1,6 +1,6 @@
-# desire
+# chuxin_wx
 
-> desire
+> chuxin_wx
 
 ## Build Setup
 
