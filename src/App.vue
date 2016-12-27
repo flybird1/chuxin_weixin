@@ -27,8 +27,8 @@
     vuex: {
       getters: {
         isLoading: ({loading}) => loading.isLoading,
-        direction: ({loading}) => loading.direction
-        // msg: ({showmsg}) => showmsg.message
+        direction: ({loading}) => loading.direction,
+        msg: ({showmsg}) => showmsg.message
       }
     },
     watch:{

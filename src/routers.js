@@ -4,9 +4,11 @@ import { sync } from 'vuex-router-sync'
 import store from './vuex/store'
 import { UPDATE_LOADING, UPDATE_DIRECTION } from './vuex/types'
 
-import Home from './views//Home'
-import Hello from './views/Hello'
+import Home from './views/Home'
+import DemoHome from './views/DemoHome'
 
+import Hello from './views/Hello'
+// import GoddnessHome from './views/GoddnessHome'
 export default (router) => {
 
   let history = window.sessionStorage
@@ -15,8 +17,8 @@ export default (router) => {
   history.setItem('/', 0)
 
   /**
-  * sync router loading status
-  */
+   * sync router loading status
+   */
   const commit = store.commit || store.dispatch
   router.beforeEach(({ to, from, next }) => {
     const toIndex = history.getItem(to.path)
@@ -49,10 +51,17 @@ export default (router) => {
     },
     '/hello': {
       component: Hello
+    },
+    '/demoHome': {
+      component: DemoHome
     }
+    // ,
+    // '/goddnessHome': {
+    //   component: GoddnessHome
+    // }
   })
 
   router.redirect({
-    '*': '/'    // 重定向任意未匹配路径到 /
+    '*': '/' // 重定向任意未匹配路径到 /
   })
 }

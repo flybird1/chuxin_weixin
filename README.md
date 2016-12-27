@@ -22,8 +22,8 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 
 ## 配置说明
 - config/index.js dev.proxyTable 配置本地开发时所需的接口前缀代理
-- config/index.js dev.port 本地开发监听端口 9300
-- 首页地址http://localhost:9300
+- config/index.js dev.port 本地开发监听端口 9200
+- 首页地址http://localhost:9200
 
 ## 代码规范
 - 项目已引用 [vux](https://github.com/airyland/vux)组件库，可参考[vux demo](https://vux.li/#!/)使用, 样式基于[weui](https://github.com/weui/weui)；
