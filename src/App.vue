@@ -46,13 +46,15 @@
 
 <style lang="scss">
 @import '~normalize.css/normalize.css';
-
+@import './assets/scss/variables.scss';
+@import './assets/scss/iconfont.scss';
+// @import './assets/scss/common.scss';
 html, body {
   height: 100%;
 }
 
 body {
-  background-color: #fbf9fe;
+  background-color: $basic-gray;
 }
 .forward-enter, .forward-leave {
   transform: translate3d(-100%, 0, 0);

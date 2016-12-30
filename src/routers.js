@@ -8,6 +8,7 @@ import Home from './views/Home'
 import DemoHome from './views/DemoHome'
 
 import Hello from './views/Hello'
+import Login from './views/Login'
 // import GoddnessHome from './views/GoddnessHome'
 export default (router) => {
 
@@ -54,7 +55,10 @@ export default (router) => {
     },
     '/demoHome': {
       component: DemoHome
-    }
+    },
+    '/login': {
+      component: Login
+    },
     // ,
     // '/goddnessHome': {
     //   component: GoddnessHome
