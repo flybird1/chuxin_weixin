@@ -6,7 +6,6 @@
       <cell title="vue" value="Hello" link="/hello"></cell>
     </group>
     <!--bottom slot-->
-    <m-footer></m-footer>
   </div>
 </template>
 
@@ -14,14 +13,12 @@
   // import public component
   import Group from 'vux/dist/components/group'
   import Cell from 'vux/dist/components/cell'
-  import MFooter from './components/footer'
 
   // your vue code based on es6 syntax
   export default {
     components: {
       Group,
-      Cell,
-      MFooter
+      Cell
     }
   }
 </script>

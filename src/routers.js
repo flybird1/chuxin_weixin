@@ -6,7 +6,7 @@ import { UPDATE_LOADING, UPDATE_DIRECTION } from './vuex/types'
 
 import Home from './views/Home'
 import DemoHome from './views/DemoHome'
-
+import Demo from './views/Demo'
 import Hello from './views/Hello'
 import Login from './views/Login'
 // import GoddnessHome from './views/GoddnessHome'
@@ -59,6 +59,9 @@ export default (router) => {
     '/login': {
       component: Login
     },
+    '/demo':{
+      component:Demo
+    }
     // ,
     // '/goddnessHome': {
     //   component: GoddnessHome

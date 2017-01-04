@@ -1,20 +1,22 @@
 <template>
-  <div class="login">
-    <img class="logo" src="http://ogf0xbf8w.bkt.clouddn.com/logo.png">
-    <div class="login-form">
-      <span class="login-tip">已有账号请登录</span>
-      <div class="login-input">
-        <i class="iconfont icon-shoujihao"></i>
-        <input type="number" placeholder="输入手机号" required/>
-      </div>
-      <div class="login-input">
-        <i class="iconfont icon-mima"></i>
-        <input type="password" placeholder="输入密码" required/>
-      </div>
-      <div class="btn-login">登录</div>
-      <div class="weixin-wrapper">
-        <div class="tip">微信快捷登录</div>
-        <img src="http://ogf0xbf8w.bkt.clouddn.com/weixin.png">
+  <div class="bg">
+    <div class="login">
+      <img class="logo" src="http://ogf0xbf8w.bkt.clouddn.com/logo.png">
+      <div class="login-form">
+        <span class="login-tip">已有账号请登录</span>
+        <div class="login-input">
+          <i class="iconfont icon-shoujihao"></i>
+          <input type="number" placeholder="输入手机号" required/>
+        </div>
+        <div class="login-input">
+          <i class="iconfont icon-mima"></i>
+          <input type="password" placeholder="输入密码" required/>
+        </div>
+        <div class="btn-login">登录</div>
+        <div class="weixin-wrapper">
+          <div class="tip">微信快捷登录</div>
+          <img src="http://ogf0xbf8w.bkt.clouddn.com/weixin.png">
+        </div>
       </div>
     </div>
   </div>
@@ -34,12 +36,15 @@ export default {
     }
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 @import '../assets/scss/variables.scss';
 @import '../assets/scss/common.scss';
-.login .logo {
-  margin: 10vh auto;
-  display: block;
+.login {
+  padding-top: 10vh;
+  .logo {
+    margin: 0 auto 10vh auto;
+    display: block;
+  }
 }
 
 .login-tip {
@@ -112,13 +117,15 @@ export default {
       font-weight: 100;
       @extend .tran-center;
     }
-    img{
+    img {
       margin: 20px 0;
     }
   }
 }
 
-body {
-  background-color: white !important;
+.bg {
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
 }
 </style>
