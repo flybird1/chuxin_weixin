@@ -9,6 +9,8 @@ import DemoHome from './views/DemoHome'
 import Demo from './views/Demo'
 import Hello from './views/Hello'
 import Login from './views/Login'
+import GoddnessHome from './views/GoddessHome'
+import SkillDetal from './views/SkillDetal'
 // import GoddnessHome from './views/GoddnessHome'
 export default (router) => {
 
@@ -59,13 +61,15 @@ export default (router) => {
     '/login': {
       component: Login
     },
-    '/demo':{
-      component:Demo
+    '/demo': {
+      component: Demo
+    },
+    '/goddnessHome': {
+      component: GoddnessHome
+    },
+    '/skillDetal': {
+      component: SkillDetal
     }
-    // ,
-    // '/goddnessHome': {
-    //   component: GoddnessHome
-    // }
   })
 
   router.redirect({

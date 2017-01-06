@@ -45,14 +45,45 @@
 
     content: '';
 }
-.img-responsive {
-    max-width: 100%;
+.img-responsive
+{
+    overflow: hidden;
+
+    // max-width: 100%;
     height: 0;
     padding-bottom: 100%;
-    background-color:#fff;
-    overflow: hidden;
+
+    background-color: #fff;
 }
-.font-size-10{
-	font-size: 12px;
-	transform: scale(0.8,0.8);
+.font-size-10
+{
+    font-size: 12px;
+
+    transform: scale(.8,.8);
+}
+.mask
+{
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0,0,0,.5);
+}
+@mixin box-sizing ($sizing)
+{
+    -webkit-box-sizing: $sizing;
+       -moz-box-sizing: $sizing;
+            box-sizing: $sizing;
+}
+@mixin circle ($val)
+{
+    width: $val;
+    height: $val;
+
+    border-radius: $val;
+}
+@mixin width-calc ($val)
+{
+    width:         calc($val);
+    width: -webkit-calc($val);
+    width:    -moz-calc($val);
 }

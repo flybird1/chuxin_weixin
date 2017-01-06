@@ -27,7 +27,12 @@
     <flexbox class="section-2">
       <flexbox-item>
         <div class=" iconfont icon-label label-red ">新秀</div>
-        <div class="wrapper"><img class="square" src="http://ogf0xbf8w.bkt.clouddn.com/demo3-01.png"></div>
+        <div class="wrapper"><img class="square" src="http://ogf0xbf8w.bkt.clouddn.com/demo3-01.png">
+          <div class="desc-1">
+            <div class="userName">用户昵称用户昵称</div>
+            <div class="skillTag">技能标签</div>
+          </div>
+        </div>
       </flexbox-item>
       <flexbox-item>
         <div class="wrapper"><img class="square" src="http://ogf0xbf8w.bkt.clouddn.com/demo3-01.png"></div>
@@ -36,7 +41,12 @@
     <flexbox class="section-3">
       <flexbox-item>
         <span class=" iconfont icon-label label-red ">新秀</span>
-        <div class="wrapper"><img class="square" src="http://ogf0xbf8w.bkt.clouddn.com/demo3-01.png"></div>
+        <div class="wrapper"><img class="square" src="http://ogf0xbf8w.bkt.clouddn.com/demo3-01.png">
+          <div class="desc-2">
+            <div class="skillTag">技能标签</div>
+            <div class="userName">用户昵称用户昵称</div>
+          </div>
+        </div>
       </flexbox-item>
       <flexbox-item>
         <div class="wrapper"><img class="square" src="http://ogf0xbf8w.bkt.clouddn.com/demo3-01.png"></div>
@@ -50,11 +60,22 @@
     <flexbox class="section-4" :gutter="0" wrap="wrap">
       <flexbox-item :span="1/2">
         <div class=" iconfont icon-label label-red ">新秀</div>
-        <div class="wrapper"><img class="square" src="http://ogf0xbf8w.bkt.clouddn.com/demo3-01.png"></div>
+        <div class="wrapper"><img class="square" src="http://ogf0xbf8w.bkt.clouddn.com/demo3-01.png">
+          <div class="desc-1">
+            <div class="userName">用户昵称用户昵称</div>
+            <div class="skillTag">技能标签</div>
+          </div>
+        </div>
+        <div class="info"><span class="iconfont icon-female">21</span><span class="iconfont icon-Star">处女座</span>
+          <div class="school">上海皇家家里蹲大学(龙华校区龙华校区龙华校区)</div>
+        </div>
       </flexbox-item>
       <flexbox-item :span="1/2">
         <div class=" iconfont icon-label label-red ">新秀</div>
         <div class="wrapper"><img class="square" src="http://ogf0xbf8w.bkt.clouddn.com/demo3-01.png"></div>
+        <div class="info"><span class="iconfont icon-female">21</span><span class="iconfont icon-Star">处女座</span>
+          <div class="school">上海交通大学</div>
+        </div>
       </flexbox-item>
       <flexbox-item :span="1/2">
         <div class=" iconfont icon-label label-red ">新秀</div>
@@ -122,6 +143,7 @@ p.vux-swiper-desc {
   @extend .font-size-10;
   margin: -45% auto 0 auto;
   width: 60px;
+  border: 1px solid white;
   color: white;
   font-weight: 200;
   height: 1.6rem;
@@ -137,7 +159,6 @@ p.vux-swiper-desc {
   top: 0;
   z-index: 3;
   width: 33px;
-  // height: 
   font-size: 1rem;
   line-height: 1.6rem;
   overflow: hidden;
@@ -149,7 +170,7 @@ p.vux-swiper-desc {
     left: -2px;
   }
   &.label-red:before {
-    color: $red1;
+    color: $red0;
   }
   &.label-orange:before {
     color: $orange;
@@ -163,7 +184,6 @@ p.vux-swiper-desc {
   background-color: white;
   box-sizing: border-box;
 }
-
 
 .section-3 {
   padding: 0 15px 10px 15px;
@@ -182,7 +202,7 @@ p.vux-swiper-desc {
   text-align: center;
   position: relative;
   @extend .img-responsive;
-  img{
+  img {
     width: 100%;
   }
 }
@@ -212,7 +232,7 @@ p.vux-swiper-desc {
   line-height: 20px;
   &:before {
     content: '|';
-    color: $red1;
+    color: $red0;
     margin-right: 2px;
     font-size: 16px;
     line-height: 20px;
@@ -221,5 +241,77 @@ p.vux-swiper-desc {
 
 .section-4 {
   margin-top: 1px;
+  padding-right: 7px;
+  .vux-flexbox-item {
+    @include box-sizing(border-box);
+    padding-right: 8px;
+  }
+}
+
+.desc {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 44px;
+    @include box-sizing(border-box);
+  font-size: 14px;
+  padding-left: 6%;
+  padding-right: 6%;
+  margin: 0;
+  background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, .7));
+  background-image: linear-gradient(180deg, transparent, rgba(0, 0, 0, .7));
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, .5);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+.desc-1 {
+  @extend .desc;
+  padding-top: 20px;
+  * {
+    display: inline-block;
+  }
+  .skillTag {
+    margin: 0;
+    vertical-align: text-bottom;
+  }
+  .userName {
+    width: calc(100% - 60px);
+    width: -webkit-calc(100% - 60px);
+    width: -moz-calc(100% - 60px);
+    text-align: left;
+  }
+}
+
+.desc-2 {
+  @extend .desc;
+  .skillTag {
+    margin: 0 auto;
+  }
+  .userName {
+    width: calc(100% - 60px);
+    width: -webkit-calc(100% - 60px);
+    width: -moz-calc(100% - 60px);
+  }
+}
+
+.info {
+  padding-top: 5px;
+  padding-bottom: 15px;
+  .iconfont {
+    font-size: 12px;
+    color: $black1;
+    margin-right: 10px;
+    line-height: 1;
+  }
+  .school {
+    color: $gray4;
+    max-height: 38px;
+    overflow: hidden;
+  }
 }
 </style>

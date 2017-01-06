@@ -51,6 +51,7 @@
 // @import './assets/scss/common.scss';
 html, body {
   height: 100%;
+  line-height: 1;
 }
 html{
   font-size: 62.5%;
