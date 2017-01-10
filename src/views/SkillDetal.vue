@@ -1,10 +1,7 @@
 <template>
   <!-- root element is required， and the class must be **-view -->
   <div class="SkillDetal-view">
-    <div class="iconfont icon-BackArrow"></div>
-    <div class="header">
-      <div class="title">技能详情</div>
-    </div>
+    <y-header title="技能详情"></y-header>
     <div class="cover" style="background-image: url('http://ogf0xbf8w.bkt.clouddn.com/demo6-02.png')">
       <div class="layer">
         <div class="demoAudio"></div>

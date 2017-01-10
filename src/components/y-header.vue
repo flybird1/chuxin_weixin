@@ -1,8 +1,9 @@
 <template>
-  <!-- <div class="iconfont icon-BackArrow" @click.preventDefault v-show="leftOptions.showBack" :transition="transition" @click="onClickBack"></div> -->
   <div class="iconfont icon-BackArrow" @click="onClickBack" v-show="leftOptions.showBack" :transition="transition"></div>
   <div class="header">
-    <div class="title" v-show="title" :transition="transition">{{title}}</div>
+    <div class="title" @click="$emit('on-click-title')"><span v-show="title" :transition="transition">{{title}}</span>
+      <slot></slot>
+    </div>
   </div>
 </template>
 <script>

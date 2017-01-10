@@ -1,6 +1,6 @@
 <template>
   <div class="Order-view">
-    <y-header>提交订单</y-header>
+    <y-header title="提交订单"></y-header>
     <div class="user-wrapper">
       <div class="headPortrait-wrapper">
         <img class="headPortrait" src="http://ogf0xbf8w.bkt.clouddn.com/demo5-02.png">
