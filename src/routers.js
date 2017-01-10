@@ -11,7 +11,7 @@ import Hello from './views/Hello'
 import Login from './views/Login'
 import GoddnessHome from './views/GoddessHome'
 import SkillDetal from './views/SkillDetal'
-// import GoddnessHome from './views/GoddnessHome'
+import Order from './views/Order'
 export default (router) => {
 
   let history = window.sessionStorage
@@ -69,6 +69,9 @@ export default (router) => {
     },
     '/skillDetal': {
       component: SkillDetal
+    },
+    '/order':{
+      component:Order
     }
   })
 

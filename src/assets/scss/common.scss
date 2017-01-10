@@ -87,3 +87,20 @@
     width: -webkit-calc($val);
     width:    -moz-calc($val);
 }
+.sprite {
+    background-image: url(http://ogf0xbf8w.bkt.clouddn.com/spritesheet.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+.sprite_selected {
+    width: 14px;
+    height: 14px;
+    background-position: -2px -2px;
+}
+
+.sprite.people {
+    width: 14px;
+    height: 16px;
+    background-position: -20px -2px;
+}

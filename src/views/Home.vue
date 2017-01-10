@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="Home-view">
     <swiper :list="demo03_list" auto height="110px" dots-class="custom-bottom" dots-position="center"></swiper>
     <flexbox class="section-1">
       <flexbox-item>
