@@ -48,7 +48,6 @@
 @import '~normalize.css/normalize.css';
 @import './assets/scss/variables.scss';
 @import './assets/scss/iconfont.scss';
-// @import './assets/scss/common.scss';
 html, body {
   height: 100%;
   line-height: 1;
