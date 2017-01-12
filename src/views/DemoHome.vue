@@ -4,7 +4,8 @@
   </div>
 </template>
 <script>
-import Swiper from 'vux/dist/components/swiper'
+// import Swiper from 'vux/dist/components/swiper'
+import Swiper from 'vux/src/components'
 // import Swiper-  from 'vux/dist/components/swiper'
 
 const baseList = [{
@@ -21,10 +22,6 @@ const baseList = [{
 export default {
   components: {
     Swiper
-  },
-  ready() {},
-  methods: {
-    
   },
   data() {
     return {

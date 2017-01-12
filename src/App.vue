@@ -4,13 +4,14 @@
     <router-view
     :transition="'vux-pop-' + (direction === 'forward' ? 'in' : 'out')"
     ></router-view>
-    <toast :show.sync="showToast" type="{{msg.type}}">{{msg.content}}</toast>
+    <toast :show="showToast" v-bind:type="msg.type">{{msg.content}}</toast>
   </div>
 </template>
 
 <script>
-  import Loading from 'vux/dist/components/loading'
-  import Toast from 'vux/dist/components/toast'
+  import Loading from 'vux/src/components/loading'
+  import Toast from 'vux/src/components/toast'
+  // import {Loading,Toast} from 'vux'
   import store from './vuex/store'
   import { showMsg,hideMsg } from './vuex/actions'
   
@@ -45,6 +46,8 @@
 </script>
 
 <style lang="scss">
+// @import '~vux/src/styles/reset.less';
+
 @import '~normalize.css/normalize.css';
 @import './assets/scss/variables.scss';
 @import './assets/scss/iconfont.scss';
@@ -59,18 +62,17 @@ html{
 body {
   background-color: $basic-gray;
 }
-.forward-enter, .forward-leave {
+.forward-enter, .forward-leave-active{
   transform: translate3d(-100%, 0, 0);
 }
-.back-enter, .back-leave {
+.back-enter, .back-leave-active {
   transform: translate3d(100%, 0, 0);
 }
 
 /**
 * vue-router transition
 */
-.vux-pop-out-transition,
-.vux-pop-in-transition {
+.vux-pop-out-enter-active, .vux-pop-out-leave-active {
   width: 100%;
   animation-duration: 0.5s;
   animation-fill-mode: both;

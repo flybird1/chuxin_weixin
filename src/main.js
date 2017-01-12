@@ -20,11 +20,13 @@ Vue.use(Device)
  */
 Vue.use(Router)
 const router = new Router({
-  history: true,                    // 启用 HTML5 history 模式。利用 history.pushState() 和 history.replaceState() 来管理浏览历史记录。
-  saveScrollPosition: true,         // 当用户点击后退按钮时，借助 HTML5 history 中的 popstate 事件对应的 state 来重置页面的滚动位置
-  transitionOnLoad: false,          // 在初次加载时是否对 <router-view> 处理场景切换效果
-  suppressTransitionError: true     // 当值为 true 时，在场景切换钩子函数中发生的异常会被吞掉。
+  el: '#app',
+  router: router,
+  // template: '<router-view></router-view>'
+  mode: 'history', // 启用 HTML5 history 模式。利用 history.pushState() 和 history.replaceState() 来管理浏览历史记录。
+  scrollBehavior: function(to, from, savedPosition) {
+    return savedPosition || { x: 0, y: 0 }
+  } // 当用户点击后退按钮时，借助 HTML5 history 中的 popstate 事件对应的 state 来重置页面的滚动位置
 })
 
 configRouter(router)
-router.start(App, '#app')

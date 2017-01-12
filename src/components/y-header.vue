@@ -1,8 +1,10 @@
 <template>
-  <div class="iconfont icon-BackArrow" @click="onClickBack" v-show="leftOptions.showBack" :transition="transition"></div>
-  <div class="header">
-    <div class="title" @click="$emit('on-click-title')"><span v-show="title" :transition="transition">{{title}}</span>
-      <slot></slot>
+  <div>
+    <div class="iconfont icon-BackArrow" @click="onClickBack" v-show="leftOptions.showBack" :transition="transition"></div>
+    <div class="header">
+      <div class="title" @click="$emit('on-click-title')"><span v-show="title" :transition="transition">{{title}}</span>
+        <slot></slot>
+      </div>
     </div>
   </div>
 </template>

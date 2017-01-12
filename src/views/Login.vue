@@ -27,7 +27,6 @@ import {
 } from '../vuex/actions'
 
 export default {
-  ready() {},
     components: {
 
     },

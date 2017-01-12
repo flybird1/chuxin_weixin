@@ -48,34 +48,59 @@ export default (router) => {
 
   sync(store, router)
 
-  router.map({
-    '/': {
-      component: Home
-    },
-    '/hello': {
-      component: Hello
-    },
-    '/demoHome': {
-      component: DemoHome
-    },
-    '/login': {
-      component: Login
-    },
-    '/demo': {
-      component: Demo
-    },
-    '/goddnessHome': {
-      component: GoddnessHome
-    },
-    '/skillDetal': {
-      component: SkillDetal
-    },
-    '/order':{
-      component:Order
-    }
-  })
+  router.routes[{
+    path: '*',
+    redirect: '/'
+  }, {
+    path: '/',
+    component: Home
+  }, {
+    path: '/hello',
+    component: Hello
+  }, {
+    path: '/demoHome',
+    component: DemoHome
+  }, {
+    path: '/login',
+    component: Login
+  }, {
+    path: '/demo',
+    component: Demo
+  }, {
+    path: '/goddnessHome',
+    component: GoddnessHome
+  }, {
+    path: '/skillDetal',
+    component: SkillDetal
+  }, {
+    path: '/order',
+    component: Order
+  }];
+  // ({
+  //   '/': {
+  //     component: Home
+  //   },
+  //   '/hello': {
+  //     component: Hello
+  //   },
+  //   '/demoHome': {
+  //     component: DemoHome
+  //   },
+  //   '/login': {
+  //     component: Login
+  //   },
+  //   '/demo': {
+  //     component: Demo
+  //   },
+  //   '/goddnessHome': {
+  //     component: GoddnessHome
+  //   },
+  //   '/skillDetal': {
+  //     component: SkillDetal
+  //   },
+  //   '/order': {
+  //     component: Order
+  //   }
+  // })
 
-  router.redirect({
-    '*': '/' // 重定向任意未匹配路径到 /
-  })
 }
