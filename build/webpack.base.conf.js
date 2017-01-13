@@ -2,6 +2,11 @@ var path = require('path')
 var config = require('../config')
 var utils = require('./utils')
 var projectRoot = path.resolve(__dirname, '../')
+console.info(__dirname)
+
+console.info(path.join(__dirname, '../node_modules'))
+
+console.info(projectRoot)
 
 module.exports = {
   entry: {
@@ -37,7 +42,7 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel',
-        include: projectRoot,
+        include: path.join(projectRoot,'src'),
         exclude: /node_modules/
       },
       {
