@@ -13,3 +13,4 @@ export const hideMsg = ({dispatch}) => {
 export const welcome = (store) => {
   showMsg(store, 'welcome back!', 'success')
 }
+

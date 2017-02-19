@@ -19,8 +19,8 @@ Vue.http.interceptors.push((request, next)=>{
   next((response) => {
     // 这里可以对响应的结果进行处理
     if (response.status === 401) {
-      // signOut()
-      // window.location.pathname = '/login'
+      // 登出
+      // 路由跳转到登录页面
     }
   })
 })

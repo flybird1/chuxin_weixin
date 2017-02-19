@@ -11,9 +11,8 @@
 
 <script>
   // import public component
-  import Group from 'vux/src/components/group'
-  import Cell from 'vux/src/components/cell'
-// import {Group,Cell} from 'vux/src/components'
+  import Group from 'vux/dist/components/group'
+  import Cell from 'vux/dist/components/cell'
 
   // your vue code based on es6 syntax
   export default {
@@ -26,7 +25,7 @@
 
 <style lang="scss">
   /* import public class */
-  // @import '~vux/dist/vux.css';
+  @import '~vux/dist/vux.css';
 
   .demo-view{
     /* your private class */

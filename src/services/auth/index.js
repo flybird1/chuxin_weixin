@@ -1,8 +1,8 @@
-import {router} from '../index'
+import {router} from '../../routers'
 
-const API_URL = 'http://localhost:3001/'
-const LOGIN_URL = API_URL + 'sessions/create/'
-const SIGNUP_URL = API_URL + 'users/'
+const API_URL = 'http://original.dev.zhai.me/'
+const LOGIN_URL = API_URL + 'user/login'
+// const SIGNUP_URL = API_URL + 'user/register'
 
 export default {
 
@@ -25,20 +25,20 @@ export default {
     })
   },
 
-  signup(context, creds, redirect) {
-    context.$http.post(SIGNUP_URL, creds, (data) => {
-      localStorage.setItem('id_token', data.id_token)
+  // signup(context, creds, redirect) {
+  //   context.$http.post(SIGNUP_URL, creds, (data) => {
+  //     localStorage.setItem('id_token', data.id_token)
 
-      this.user.authenticated = true
+  //     this.user.authenticated = true
 
-      if(redirect) {
-        router.go(redirect)        
-      }
+  //     if(redirect) {
+  //       router.go(redirect)        
+  //     }
 
-    }).error((err) => {
-      context.error = err
-    })
-  },
+  //   }).error((err) => {
+  //     context.error = err
+  //   })
+  // },
 
   logout() {
     localStorage.removeItem('id_token')

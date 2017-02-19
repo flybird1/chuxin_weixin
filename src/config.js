@@ -1,1 +1,1 @@
-export const API_ROOT = '/wukong/api/v1/'
+export const API_ROOT = '/original/api/v3'

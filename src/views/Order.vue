@@ -9,10 +9,10 @@
     </div>
     <!-- <div class="orderDetail"> -->
     <group title="订单明细">
-      <!--  <selector title="技能" :options="list" :value="value2" class="iconfont icon-icStar"><i slot="icon" class="iconfont icon-icStar"></i>
+      <!--  <selector title="技能" :options="list" :value.sync="value2" class="iconfont icon-icStar"><i slot="icon" class="iconfont icon-icStar"></i>
       </selector> -->
       <cell title="技能"><i slot="icon" class="iconfont icon-icStar"></i>
-        <!-- <selector :options="list" :value="value2" class="iconfont icon-icStar">
+        <!-- <selector :options="list" :value.sync="value2" class="iconfont icon-icStar">
         </selector> -->
       </cell>
       <cell title="技能" value="叫醒" link="/hello">
@@ -38,9 +38,8 @@
   </div>
 </template>
 <script>
-// import {Group,Cell} from 'vux/src/components'
-import Group from 'vux/src/components/group'
-import Cell from 'vux/src/components/cell'
+import Group from 'vux/dist/components/group'
+import Cell from 'vux/dist/components/cell'
 // import Selector from 'vux/dist/components/selector'
 import YHeader from 'components/y-header'
 export default {
@@ -70,7 +69,7 @@ export default {
 }
 </script>
 <style lang="scss">
-// @import '~vux/dist/vux.css';
+@import '~vux/dist/vux.css';
 @import '../assets/scss/variables.scss';
 @import '../assets/scss/common.scss';
 .Order-view {

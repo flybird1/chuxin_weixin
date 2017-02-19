@@ -22,8 +22,8 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      "/wukong/api/v1": {
-        target: 'http://mobile.wantgo.me',  // target host
+      "/original/api/v3": {
+        target: 'http://original.dev.zhai.me',  // target host
         changeOrigin: true                  // needed for virtual hosted sites
         // ws: true,                        // proxy websockets
       }

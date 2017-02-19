@@ -89,10 +89,9 @@
   </div>
 </template>
 <script>
-// import Swiper from 'vux/dist/components/swiper'
-// import Flexbox from 'vux/dist/components/flexbox'
-// import FlexboxItem from 'vux/dist/components/flexbox-item'
-import {Swiper,Flexbox,FlexboxItem} from 'vux/src/components'
+import Swiper from 'vux/dist/components/swiper'
+import Flexbox from 'vux/dist/components/flexbox'
+import FlexboxItem from 'vux/dist/components/flexbox-item'
 
 const baseList = [{
   url: 'javascript:',
@@ -110,6 +109,10 @@ export default {
     Swiper,
     Flexbox,
     FlexboxItem
+  },
+  ready() {},
+  methods: {
+
   },
   data() {
     return {
